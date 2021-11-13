@@ -11,11 +11,29 @@ import Button from '@mui/material/Button';
 
 const Manageproduct = () => {
     const [manageproducts, setManageproducts] = useState([])
+
     useEffect(() => {
         fetch(`https://nameless-chamber-77947.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setManageproducts(data))
     }, [])
+
+    //DELETE an user
+
+    const handleDeleteUser = id => {
+        const url = `https://nameless-chamber-77947.herokuapp.com/products/${id}`
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    alert('deleted succesfully')
+                    const remainingProducts = manageproducts.filter(product => product._id !== id)
+                    setManageproducts(remainingProducts)
+                }
+            })
+    }
     return (
         <div>
             <h3 style={{ textAlign: 'left' }} >Total products: {manageproducts.length}</h3>
@@ -47,7 +65,7 @@ const Manageproduct = () => {
                                 <TableCell align="right">{row.price}</TableCell>
                                 <TableCell align="right">{row.description}</TableCell>
                                 <TableCell>
-                                    <Button>Delete</Button>
+                                    <Button onClick={() => handleDeleteUser(row._id)} >Delete</Button>
                                 </TableCell>
                             </TableRow>
                         ))}
