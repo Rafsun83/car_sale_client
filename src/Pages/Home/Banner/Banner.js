@@ -1,5 +1,7 @@
+import { Button } from '@mui/material';
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import car from '../../../Images/car1.jpg'
 import car2 from '../../../Images/car2.jpg'
 import car3 from '../../../Images/car3.jpg'
@@ -16,56 +18,49 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h1>Power And Beauty</h1>
+                    <p>Free library's $1m auto archives are moving to philly's world-famous car museum and to a hershey attraction</p>
+                    <Button variant="contained" style={{ backgroundColor: 'red', height: '50px' }} >Discover Today</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={car2}
+                    src={car}
                     alt="Second slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h1>Power And Beauty</h1>
+                    <p>Free library's $1m auto archives are moving to philly's world-famous car museum and to a hershey attraction</p>
+                    <Button variant="contained" style={{ backgroundColor: 'red', height: '50px' }} >Discover Today</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={car3}
+                    src={car}
                     alt="Third slide"
                 />
 
+
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h1>Power And Beauty</h1>
+                    <p>Free library's $1m auto archives are moving to philly's world-famous car museum and to a hershey attraction</p>
+                    <Button variant="contained" style={{ backgroundColor: 'red', height: '50px' }} >Discover Today</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={car4}
+                    src={car}
                     alt="Third slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={car6}
-                    alt="Third slide"
-                />
-
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h1>Power And Beauty</h1>
+                    <p>Free library's $1m auto archives are moving to philly's world-famous car museum and to a hershey attraction</p>
+                    <Button variant="contained" style={{ backgroundColor: 'red', height: '50px' }} >Discover Today</Button>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

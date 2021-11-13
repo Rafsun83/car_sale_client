@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Hybrid",
+        "price": "$ 12000",
+        "description": " We have a full range of cars Across the most popular brands. Thumb Certified used cars We inspect before we sell",
+        "img": "https://i.ibb.co/JRFjhYS/images-8.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Allion",
+        "price": "$ 13000",
+        "description": " We have a full range of cars Across the most popular brands. Thumb Certified used cars We inspect before we sell",
+        "img": "https://i.ibb.co/JRFjhYS/images-8.jpg"
+    },
+    {
+        "id": 3,
+        "name": "BMW",
+        "price": "$ 22000",
+        "description": " We have a full range of cars Across the most popular brands. Thumb Certified used cars We inspect before we sell",
+        "img": "https://i.ibb.co/JRFjhYS/images-8.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Marcedec",
+        "price": "$ 15000",
+        "description": " We have a full range of cars Across the most popular brands. Thumb Certified used cars We inspect before we sell",
+        "img": "https://i.ibb.co/JRFjhYS/images-8.jpg"
+    },
+    {
+        "id": 5,
+        "name": "BMW",
+        "price": "$ 11000",
+        "description": " We have a full range of cars Across the most popular brands. Thumb Certified used cars We inspect before we sell",
+        "img": "https://i.ibb.co/JRFjhYS/images-8.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Corola",
+        "price": "$ 17000",
+        "description": " We have a full range of cars Across the most popular brands. Thumb Certified used cars We inspect before we sell",
+        "img": "https://i.ibb.co/JRFjhYS/images-8.jpg"
+    }
+]
