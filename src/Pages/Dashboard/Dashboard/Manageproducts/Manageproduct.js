@@ -36,7 +36,7 @@ const Manageproduct = () => {
     }
     return (
         <div>
-            <h3 style={{ textAlign: 'left' }} >Total products: {manageproducts.length}</h3>
+            <h3 style={{ textAlign: 'left', padding: '10px', backgroundColor: 'tomato' }} >Total products: {manageproducts.length}</h3>
 
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">

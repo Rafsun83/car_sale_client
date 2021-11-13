@@ -48,54 +48,41 @@ function Dashboard(props) {
     };
 
     const drawer = (
-        <div>
+        <div >
             <Toolbar />
             <Divider />
             <Box style={{ display: 'block', textAlign: 'left', color: 'red' }}>
 
-                <Link to={`${url}`}>
+                <Link to={`${url}`} style={{ textDecoration: 'none', padding: '10px' }}>
                     <Button variant="inherit">Dashboard</Button>
                 </Link>
-                <Link to={`${url}/myorders`}>
+                <Link to={`${url}/myorders`} style={{ textDecoration: 'none', padding: '10px' }}>
                     <Button variant="inherit">My Orders</Button>
                 </Link>
 
-                <Link to={`${url}/review`}>
+                <Link to={`${url}/review`} style={{ textDecoration: 'none', padding: '10px' }}>
                     <Button variant="inherit">Review about</Button>
                 </Link>
                 {
                     Admin && <Box>
-                        <Link to={`${url}/makeadmin`}>
+                        <Link to={`${url}/makeadmin`} style={{ textDecoration: 'none', padding: '10px' }}>
                             <Button variant="inherit">Make Admin</Button>
                         </Link>
 
-                        <Link to={`${url}/addproduct`}>
+                        <Link to={`${url}/addproduct`} style={{ textDecoration: 'none', padding: '10px' }}>
                             <Button variant="inherit">Add product</Button>
                         </Link>
-                        <Link to={`${url}/manageproduct`}>
+                        <Link to={`${url}/manageproduct`} style={{ textDecoration: 'none', padding: '10px' }}>
                             <Button variant="inherit">Manage product</Button>
                         </Link>
                     </Box>
                 }
-                <Link to={`${url}/logout`}>
+                <Link to={`${url}/logout`} style={{ textDecoration: 'none', padding: '10px' }}>
                     <Button onClick={Logout} variant="inherit">Logout</Button>
                 </Link>
             </Box>
 
 
-
-            <List>
-
-
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
 
         </div>
     );

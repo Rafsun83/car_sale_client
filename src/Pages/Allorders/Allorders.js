@@ -19,7 +19,7 @@ const Allorders = () => {
     }, [user.email])
     return (
         <div>
-            <h3 style={{ textAlign: 'left' }} >Total Orders: {orders.length}  </h3>
+            <h3 style={{ textAlign: 'left', padding: '10px', backgroundColor: 'tomato' }} >Total Orders: {orders.length}  </h3>
 
 
             <TableContainer component={Paper}>

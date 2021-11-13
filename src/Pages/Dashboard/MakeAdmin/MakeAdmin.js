@@ -34,8 +34,8 @@ const MakeAdmin = () => {
     return (
         <div>
             <div style={{ textAlign: 'left', marginBottom: 5 }}>
-                <h3>You want to make valuable person? please enter here emali and made Admin.</h3>
-                <h5>Thank You !</h5>
+                <h3 style={{ textAlign: 'left', padding: '10px', backgroundColor: 'tomato' }}>You want to make valuable person? please enter here emali and made Admin. <br /> <span>Thank You !</span> </h3>
+
             </div>
             <Box sx={{ border: '1px solid whitesmoke', width: '40%', padding: 5 }}>
                 <form onSubmit={handleAdminSubmit}>

@@ -18,7 +18,7 @@ const Review = () => {
     }
     return (
         <div>
-            <h3>Here share your valuable opinion feel free. we learn your feedback. Thanks ! </h3>
+            <h3 style={{ textAlign: 'left', padding: '10px', backgroundColor: 'tomato' }}>Here share your valuable opinion feel free. we learn your feedback. Thanks ! </h3>
             <div className="Shipping-info">
                 <form className="Shipping-form" onSubmit={handleSubmit(onSubmit)}>
 
