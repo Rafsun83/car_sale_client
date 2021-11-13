@@ -18,7 +18,7 @@ const Review = () => {
     }
     return (
         <div>
-            <h3>This is review</h3>
+            <h3>Here share your valuable opinion feel free. we learn your feedback. Thanks ! </h3>
             <div className="Shipping-info">
                 <form className="Shipping-form" onSubmit={handleSubmit(onSubmit)}>
 

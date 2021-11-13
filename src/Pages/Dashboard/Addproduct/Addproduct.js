@@ -19,7 +19,7 @@ const Addproduct = () => {
     }
     return (
         <div>
-            <h3>This is add product</h3>
+            <h3>Added Products</h3>
             <div className="Shipping-info">
                 <form className="Shipping-form" onSubmit={handleSubmit(onSubmit)}>
 

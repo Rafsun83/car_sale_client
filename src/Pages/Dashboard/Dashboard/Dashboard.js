@@ -51,7 +51,7 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
-            <Box style={{ display: 'block' }}>
+            <Box style={{ display: 'block', textAlign: 'left', color: 'red' }}>
 
                 <Link to={`${url}`}>
                     <Button variant="inherit">Dashboard</Button>

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Alert } from '@mui/material';
+import { Alert, Box } from '@mui/material';
+
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('')
@@ -32,15 +33,21 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            <h3>This is make admin</h3>
-            <form onSubmit={handleAdminSubmit}>
-                <TextField id="standard-basic"
-                    label="Email"
-                    type="email"
-                    onBlur={handleonBlur}
-                    variant="standard" />
-                <Button variant="contained" type="submit">Add make admin</Button>
-            </form>
+            <div style={{ textAlign: 'left', marginBottom: 5 }}>
+                <h3>You want to make valuable person? please enter here emali and made Admin.</h3>
+                <h5>Thank You !</h5>
+            </div>
+            <Box sx={{ border: '1px solid whitesmoke', width: '40%', padding: 5 }}>
+                <form onSubmit={handleAdminSubmit}>
+                    <TextField id="standard-basic"
+                        sx={{ width: ' 100% ', mb: 3 }}
+                        label="Email"
+                        type="email"
+                        onBlur={handleonBlur}
+                        variant="standard" /> <br />
+                    <Button sx={{ width: ' 100% ' }} variant="contained" type="submit">Add make admin</Button>
+                </form>
+            </Box>
             {
                 Adminsuccess && <Alert severity="success">Made admin successfully !</Alert>
             }
