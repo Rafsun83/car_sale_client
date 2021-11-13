@@ -12,7 +12,7 @@ const ProductDetails = (props) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/?bookingID=${bookingId}/&name=${bookingName}`)
+        fetch(`https://nameless-chamber-77947.herokuapp.com/products/?bookingID=${bookingId}/&name=${bookingName}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [bookingId, bookingName])
@@ -23,7 +23,7 @@ const ProductDetails = (props) => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/bookedorders', data)
+        axios.post('https://nameless-chamber-77947.herokuapp.com/bookedorders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added sucessfully')

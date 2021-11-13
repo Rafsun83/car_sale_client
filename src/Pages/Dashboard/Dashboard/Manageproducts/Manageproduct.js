@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 const Manageproduct = () => {
     const [manageproducts, setManageproducts] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://nameless-chamber-77947.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setManageproducts(data))
     }, [])

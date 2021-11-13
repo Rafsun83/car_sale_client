@@ -7,7 +7,7 @@ const Addproduct = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/products', data)
+        axios.post('https://nameless-chamber-77947.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added sucessfully')

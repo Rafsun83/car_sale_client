@@ -13,7 +13,7 @@ const Allorders = () => {
     const [orders, setOrders] = useState([])
     const { user } = UseAuth()
     useEffect(() => {
-        fetch(`http://localhost:5000/bookedorders?email=${user.email}`)
+        fetch(`https://nameless-chamber-77947.herokuapp.com/bookedorders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user.email])

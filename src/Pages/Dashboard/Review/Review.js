@@ -6,7 +6,7 @@ const Review = () => {
     const { user } = UseAuth()
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/productreview', data)
+        axios.post('https://nameless-chamber-77947.herokuapp.com/productreview', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added sucessfully')
