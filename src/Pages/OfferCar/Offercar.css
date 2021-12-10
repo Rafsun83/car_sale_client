@@ -1,0 +1,9 @@
+.slick-next:before, [dir=rtl] .slick-prev:before {
+    content: '→';
+}
+.slick-next:before, .slick-prev:before {
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: black;
+}

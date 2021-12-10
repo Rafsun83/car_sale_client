@@ -28,7 +28,7 @@ const Navigation = () => {
                     >
                         < MenuIcon />
                     </IconButton>
-                    <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography style={{ display: 'flex' }} variant="h4" component="div" sx={{ flexGrow: 1 }}>
                         Dream Car
                     </Typography>
                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/home">

@@ -13,10 +13,10 @@ const Cars = () => {
 
     return (
         <Container>
-            <Typography sx={{ mt: 5 }} variant="h4" >
+            <Typography sx={{ mt: 5 }} variant="h4" style={{ fontFamily: '-moz-initial' }} >
                 Buy Your Dream Car
             </Typography>
-            <Typography>
+            <Typography style={{ fontFamily: 'cursive' }}>
                 We have a full range of cars Across the most popular brands. Thumb Certified used cars We inspect before we sell
             </Typography>
             <Grid container spacing={2} sx={{ mt: 5 }}>

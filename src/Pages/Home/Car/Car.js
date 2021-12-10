@@ -29,7 +29,7 @@ const Car = ({ car }) => {
                     <Typography sx={{ textAlign: 'left' }}>
                         {price}
                     </Typography >
-                    <Typography sx={{ textAlign: 'left' }} variant="body2" color="text.secondary">
+                    <Typography style={{ fontFamily: 'cursive' }} sx={{ textAlign: 'left' }} variant="body2" color="text.secondary">
                         {description}
                     </Typography>
                     <Typography sx={{ textAlign: 'left', mt: 2 }}>

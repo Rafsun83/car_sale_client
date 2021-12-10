@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import React, { Component } from "react";
 import Slider from "react-slick";
 
+
 export default class AutoPlay extends Component {
     render() {
         const settings = {
@@ -16,7 +17,7 @@ export default class AutoPlay extends Component {
         };
         return (
             <Container style={{ marginTop: '30px' }}>
-                <h2 style={{ marginBottom: '20px' }} >Most Popular Brand</h2>
+                <h2 style={{ marginBottom: '20px', fontFamily: '-moz-initial' }} >Most Popular Brand</h2>
                 <Slider {...settings}>
                     <div>
                         <img style={{ width: '120px', borderRadius: '10px' }} src="https://i.ibb.co/CwBjzKC/oie-lrxeqh-Va-Aa-BY.jpg" alt="" />

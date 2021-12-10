@@ -23,6 +23,7 @@ const Review = () => {
                 <form className="Shipping-form" onSubmit={handleSubmit(onSubmit)}>
 
                     <input defaultValue={user.displayName} {...register("name", { required: true, maxLength: 20 })} />
+                    <textarea placeholder="Your Designation" {...register("designation")} />
                     <textarea placeholder="Your Opinion" {...register("description")} />
 
 

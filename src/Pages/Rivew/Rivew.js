@@ -8,6 +8,7 @@ import Stack from '@mui/material/Stack';
 
 
 
+
 const Rivew = () => {
 
     const [reviews, setReviews] = useState([])
@@ -18,7 +19,7 @@ const Rivew = () => {
     }, [])
 
     return (
-        <Container sx={{ mt: 5, mb: 5, backgroundColor: 'whitesmoke', borderRadius: 5 }}>
+        <Container sx={{ mt: 5, mb: 5, backgroundColor: 'whitesmoke', borderRadius: 3 }}>
 
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={6} mb={8} style={{ display: 'flex', alignItems: 'center' }} >
@@ -27,31 +28,41 @@ const Rivew = () => {
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} mb={4}>
-                    <Typography variant="h4" style={{ color: 'tomato', fontWeight: 'bold', marginBottom: '10px' }}>
+                    <Typography variant="h4" style={{ fontFamily: '-moz-initial', fontWeight: 'bold', marginBottom: '10px', padding: '10PX' }}>
                         Customer Feedback
 
                     </Typography>
+
                     <ImageList sx={{ width: 500, height: 450, textAlign: 'left' }}>
                         {reviews.map((item) => (
-                            <ImageListItem style={{ border: '1px solid gray', padding: 10, borderRadius: 3 }} key={item.img}>
-                                <Typography variant="subtitle1" >
-                                    {item.description}
 
-                                </Typography>
-                                <Stack direction="row" spacing={1} sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                    <ImageListItemBar
+                            <ImageListItem style={{ padding: 10, borderRadius: 3, }} key={item.img}>
+                                <Paper elevation={3}>
+                                    <Box style={{ padding: 20 }}>
+                                        <Typography
+                                            style={{ fontFamily: 'initial' }}
+                                            variant="subtitle1" >
+                                            {item.description}
 
-                                        title={item.name}
-                                        subtitle={<span>by: {item.name}</span>}
-                                        position="below"
-                                    />
+                                        </Typography>
+                                        <Stack direction="row" spacing={1} sx={{ display: 'flex', alignItems: 'center' }}>
+                                            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                                            <ImageListItemBar
+                                                style={{ fontFamily: 'initial', color: 'crimson', fontWeight: 'bold' }}
+                                                title={item.name}
+                                                subtitle={<span>{item.designation}</span>}
+                                                position="below"
+                                            />
 
-                                </Stack>
+                                        </Stack>
+                                    </Box>
+                                </Paper>
 
                             </ImageListItem>
                         ))}
                     </ImageList>
+
+
                 </Grid>
 
             </Grid>
