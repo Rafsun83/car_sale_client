@@ -8,6 +8,10 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import UseAuth from './../../../Hooks/UseAuth';
+import { Avatar, Divider } from '@mui/material';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
+import '../Navigation/Navigation.css';
+import logouticon from '@mui/icons-material/Logout';
 
 
 
@@ -34,6 +38,18 @@ const Navigation = () => {
                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/home">
                         <Button color="inherit" >Home</Button>
                     </Link>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to="/home" >
+                        <Button color="inherit" >About</Button>
+                    </Link>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to="/home" >
+                        <Button color="inherit" >Inventory</Button>
+                    </Link>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to="/home">
+                        <Button color="inherit" >Blog</Button>
+                    </Link>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to="/home">
+                        <Button color="inherit" >Contact</Button>
+                    </Link>
 
                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/allproducts">
                         <Button color="inherit">All products</Button>
@@ -42,11 +58,33 @@ const Navigation = () => {
 
                     {
                         user?.email ?
-                            <Box>
-                                <Link style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">
+                            <Box style={{ display: 'flex', alignItems: 'center' }}>
+                                {/* <Link style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">
                                     <Button color="inherit">Dashboard</Button>
-                                </Link>
-                                <Button onClick={Logout} variant="contained" color="success">{user.displayName} Logout</Button>
+                                </Link> */}
+
+                                {/* <Button onClick={Logout} color="success">  <Avatar alt="Remy Sharp" src={user.photoURL} /></Button> */}
+
+                                <DropdownButton className='View__profile' id="dropdown-basic-button" title={<Avatar alt="Remy Sharp" src={user.photoURL} />}>
+                                    <Box className='Profile__img'>
+                                        <Avatar style={{ height: 80, width: 80 }} alt="Remy Sharp" src={user.photoURL} />
+
+                                    </Box>
+                                    <Typography style={{ textAlign: 'center', padding: 10, fontWeight: 'bold' }}>
+                                        {user.displayName}
+                                    </Typography>
+
+                                    <Dropdown.Item href="#/action-1" className='Profile__button'>View Profile</Dropdown.Item>
+                                    <Divider></Divider>
+                                    <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Bookmark</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Client Analytics</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Announcement</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3" onClick={Logout} > Log Out</Dropdown.Item>
+
+                                </DropdownButton>
+
+
                             </Box>
 
                             :

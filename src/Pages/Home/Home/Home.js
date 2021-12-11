@@ -6,6 +6,7 @@ import Brand from '../Brand/Brand';
 import Cars from '../Cars/Cars';
 import Offercar from '../../OfferCar/Offercar'
 import Navigation from '../Navigation/Navigation';
+import Company from '../../Company/Company';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <Cars></Cars>
             <Rivew></Rivew>
             <Offercar></Offercar>
+            <Company></Company>
             <Footer></Footer>
 
         </div>

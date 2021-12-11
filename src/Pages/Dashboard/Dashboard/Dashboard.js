@@ -52,6 +52,9 @@ function Dashboard(props) {
             <Toolbar />
             <Divider />
             <Box style={{ display: 'block', textAlign: 'left', color: 'red' }}>
+                <Link to="/home" style={{ textDecoration: 'none', padding: '10px' }}>
+                    <Button variant="inherit">Home</Button>
+                </Link>
 
                 <Link to={`${url}`} style={{ textDecoration: 'none', padding: '10px' }}>
                     <Button variant="inherit">Dashboard</Button>
@@ -80,6 +83,7 @@ function Dashboard(props) {
                 <Link to={`${url}/logout`} style={{ textDecoration: 'none', padding: '10px' }}>
                     <Button onClick={Logout} variant="inherit">Logout</Button>
                 </Link>
+
             </Box>
 
 

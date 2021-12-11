@@ -13,7 +13,7 @@ const Cars = () => {
 
     return (
         <Container>
-            <Typography sx={{ mt: 5 }} variant="h4" style={{ fontFamily: '-moz-initial' }} >
+            <Typography sx={{ mt: 5 }} variant="h4" style={{ fontFamily: '-moz-initial', fontWeight: 'bold', padding: 30 }} >
                 Buy Your Dream Car
             </Typography>
             <Typography style={{ fontFamily: 'cursive' }}>

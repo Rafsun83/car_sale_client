@@ -5,6 +5,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import React, { useEffect, useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import UseAuth from '../../Hooks/UseAuth';
 
 
 
@@ -17,6 +18,8 @@ const Rivew = () => {
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
+
+    const { user } = UseAuth();
 
     return (
         <Container sx={{ mt: 5, mb: 5, backgroundColor: 'whitesmoke', borderRadius: 3 }}>
@@ -46,7 +49,7 @@ const Rivew = () => {
 
                                         </Typography>
                                         <Stack direction="row" spacing={1} sx={{ display: 'flex', alignItems: 'center' }}>
-                                            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                                            <Avatar alt="Remy Sharp" src={user.photoURL} />
                                             <ImageListItemBar
                                                 style={{ fontFamily: 'initial', color: 'crimson', fontWeight: 'bold' }}
                                                 title={item.name}
