@@ -45,7 +45,7 @@ const Navigation = () => {
                         <Button color="inherit" >Inventory</Button>
                     </Link>
                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/home">
-                        <Button color="inherit" >Blog</Button>
+                        <Button color="inherit" >Blogs</Button>
                     </Link>
                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/home">
                         <Button color="inherit" >Contacts</Button>
