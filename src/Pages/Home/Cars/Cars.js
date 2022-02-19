@@ -17,7 +17,7 @@ const Cars = () => {
                 Buy Your Dream Car
             </Typography>
             <Typography style={{ fontFamily: 'cursive' }}>
-                We have a full range of cars Across the most popular brands. Thumb Certified used cars We inspect before we sell
+                We have a full range of cars Across the most popular brands. Certified used cars We inspect before we sell
             </Typography>
             <Grid container spacing={2} sx={{ mt: 5 }}>
 
