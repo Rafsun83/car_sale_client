@@ -13,7 +13,7 @@ const Payment = () => {
     const { bookedorderID } = useParams()
     const [bookedorder, setBookedorder] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/bookedorders/${bookedorderID}`)
+        fetch(`https://nameless-chamber-77947.herokuapp.com/bookedorders/${bookedorderID}`)
             .then(res => res.json())
             .then(data => setBookedorder(data))
 

@@ -12,7 +12,7 @@ const Checkout = ({ bookedorder }) => {
     const [processing, setProcessing] = useState(false)
     const [clientSecret, setClientSecret] = useState('')
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://nameless-chamber-77947.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -83,7 +83,7 @@ const Checkout = ({ bookedorder }) => {
 
             }
 
-            const url = `http://localhost:5000/bookedorders/${_id}`
+            const url = `https://nameless-chamber-77947.herokuapp.com/bookedorders/${_id}`
             fetch(url, {
                 method: 'PUT',
                 headers: {
