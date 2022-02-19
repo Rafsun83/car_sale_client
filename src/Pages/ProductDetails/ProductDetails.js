@@ -9,7 +9,7 @@ const ProductDetails = (props) => {
     const { bookingId } = useParams()
     const [productsdetails, setProductsdetails] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${bookingId}`)
+        fetch(`https://nameless-chamber-77947.herokuapp.com/products/${bookingId}`)
             .then(res => res.json())
             .then(data => setProductsdetails(data))
     }, [bookingId])
