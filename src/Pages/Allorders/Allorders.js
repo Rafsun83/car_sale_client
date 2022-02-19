@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom'
 
 const Allorders = () => {
     const [orders, setOrders] = useState([])
@@ -31,6 +32,7 @@ const Allorders = () => {
                             <TableCell align="right">Adress</TableCell>
                             <TableCell align="right">Phone</TableCell>
                             <TableCell align="right">Product Id</TableCell>
+                            <TableCell align="right">Action</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -46,6 +48,9 @@ const Allorders = () => {
                                 <TableCell align="right">{row.Adress}</TableCell>
                                 <TableCell align="right">{row.phone}</TableCell>
                                 <TableCell align="right">{row.productId}</TableCell>
+                                <TableCell align="right">{row.payment ? 'paid' :
+                                    <Link to={`/dashboard/payment/${row._id}`}><button>pay</button></Link>
+                                }</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

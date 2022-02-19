@@ -20,7 +20,7 @@ export default class AutoPlay extends Component {
             <Container style={{ marginTop: '30px' }}>
                 <h2 style={{ padding: 30, fontFamily: '-moz-initial', fontWeight: 'bold' }} >Most Popular Brand</h2>
 
-                <Slider {...settings}>
+                <Slider {...settings} >
                     <div>
                         <img style={{ width: '120px', borderRadius: '10px' }} src="https://i.ibb.co/CwBjzKC/oie-lrxeqh-Va-Aa-BY.jpg" alt="" />
                     </div>

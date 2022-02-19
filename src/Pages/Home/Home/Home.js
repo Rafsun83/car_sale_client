@@ -12,7 +12,7 @@ import Company from '../../Company/Company';
 const Home = () => {
     return (
         <div style={{ overflowX: 'hidden' }}>
-            <Navigation></Navigation>
+            {/* <Navigation></Navigation> */}
             <Banner></Banner>
             <Brand></Brand>
             <Cars></Cars>

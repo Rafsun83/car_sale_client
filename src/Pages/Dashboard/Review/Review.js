@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import UseAuth from '../../../Hooks/UseAuth';
 const Review = () => {
     const { user } = UseAuth()
+
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         axios.post('https://nameless-chamber-77947.herokuapp.com/productreview', data)
@@ -23,6 +24,7 @@ const Review = () => {
                 <form className="Shipping-form" onSubmit={handleSubmit(onSubmit)}>
 
                     <input defaultValue={user.displayName} {...register("name", { required: true, maxLength: 20 })} />
+                    <textarea defaultValue={user.email} {...register("email")} />
                     <textarea placeholder="Your Designation" {...register("designation")} />
                     <textarea placeholder="Your Opinion" {...register("description")} />
 

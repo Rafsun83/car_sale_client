@@ -127,7 +127,7 @@ const UseFirebase = () => {
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
-    console.log(user)
+    // console.log(user)
     return {
         user,
         Admin,

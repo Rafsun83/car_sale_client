@@ -27,7 +27,7 @@ const Car = ({ car }) => {
                         {name}
                     </Typography>
                     <Typography sx={{ textAlign: 'left' }}>
-                        {price}
+                        ${price}
                     </Typography >
                     <Typography style={{ fontFamily: 'cursive' }} sx={{ textAlign: 'left' }} variant="body2" color="text.secondary">
                         {description}

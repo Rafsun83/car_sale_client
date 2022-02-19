@@ -3,25 +3,24 @@ import { useParams } from 'react-router';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import UseAuth from '../../Hooks/UseAuth';
-import './ProductDetails.css'
-import Navigation from '../Home/Navigation/Navigation';
+import './ProductDetails.css';
 const ProductDetails = (props) => {
-    const { bookingName } = props
+
     const { bookingId } = useParams()
-    const [product, setProduct] = useState({})
-
-
+    const [productsdetails, setProductsdetails] = useState({})
     useEffect(() => {
-        fetch(`https://nameless-chamber-77947.herokuapp.com/products/?bookingID=${bookingId}/&name=${bookingName}`)
+        fetch(`http://localhost:5000/products/${bookingId}`)
             .then(res => res.json())
-            .then(data => setProduct(data))
-    }, [bookingId, bookingName])
+            .then(data => setProductsdetails(data))
+    }, [bookingId])
+
+
 
 
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data);
+
 
         axios.post('https://nameless-chamber-77947.herokuapp.com/bookedorders', data)
             .then(res => {
@@ -35,13 +34,15 @@ const ProductDetails = (props) => {
     const { user } = UseAuth()
     return (
         <div>
-            <Navigation></Navigation>
-            <h3>This is product details {bookingId} </h3>
-            <h3>This is name {bookingName}</h3>
+            {/* <Navigation></Navigation> */}
+            {/* <h3>This is product details {bookingId} </h3>
+            <h3>This is name {bookingName}</h3> */}
 
             <div className="Shipping-info">
+                <h3>Please purchase your dream product {productsdetails.name}</h3>
                 <form className="Shipping-form" onSubmit={handleSubmit(onSubmit)}>
-                    <input defaultValue={bookingId} {...register("productId")} />
+                    <input defaultValue={bookingId} {...register("Carname")} />
+                    <input defaultValue={productsdetails.price} {...register("price")} />
                     <input defaultValue={user.displayName} {...register("name", { required: true, maxLength: 20 })} />
                     <input defaultValue={user.email} {...register("email")} />
                     {errors.email && <span>This field is required</span>}
